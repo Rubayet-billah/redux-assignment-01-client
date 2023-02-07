@@ -1,6 +1,7 @@
 import React from "react";
 
-const BlogCard = () => {
+const BlogCard = ({ blog }) => {
+  const { author, body, category, _id, publish_date, title } = blog;
   return (
     <div>
       <div className="flex flex-col max-w-lg p-6 space-y-6 overflow-hidden rounded-lg shadow-md dark:bg-gray-900 dark:text-gray-100">
@@ -13,10 +14,10 @@ const BlogCard = () => {
           <div className="flex flex-col space-y-1">
             <a
               rel="noopener noreferrer"
-              href="#"
+              href="/"
               className="text-sm font-semibold"
             >
-              Leroy Jenkins
+              {author}
             </a>
             <span className="text-xs dark:text-gray-400">4 hours ago</span>
           </div>
@@ -27,14 +28,8 @@ const BlogCard = () => {
             alt=""
             className="object-cover w-full mb-4 h-60 sm:h-96 dark:bg-gray-500"
           />
-          <h2 className="mb-1 text-xl font-semibold">
-            Nam cu platonem posidonium sanctus debitis te
-          </h2>
-          <p className="text-sm dark:text-gray-400">
-            Eu qualisque aliquando mel, id lorem detraxit nec, ad elit minimum
-            pri. Illum ipsum detracto ne cum. Mundi nemore te ius, vim ad illud
-            atqui apeirian...
-          </p>
+          <h2 className="mb-1 text-xl font-semibold">{title}</h2>
+          <p className="text-sm dark:text-gray-400">{body}</p>
         </div>
         <div className="flex flex-wrap justify-between">
           <div className="space-x-2">
