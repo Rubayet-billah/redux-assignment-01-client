@@ -40,14 +40,14 @@ const Header = () => {
               </Link>
             </li>
             <li className="flex">
-              <a
-                rel="noopener noreferrer"
-                href="/"
-                className="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent dark:text-violet-400 dark:border-violet-400"
+              <Link
+                to="/dashboard"
+                className="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent"
               >
-                Link
-              </a>
+                Dashboard
+              </Link>
             </li>
+
             <li className="flex">
               <a
                 rel="noopener noreferrer"
