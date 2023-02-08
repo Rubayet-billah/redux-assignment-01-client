@@ -4,14 +4,15 @@ import { useForm } from "react-hook-form";
 const AddBlog = () => {
   const { register, handleSubmit } = useForm();
 
-  const handleAddBlog = (data) => {};
+  const handleAddBlog = (data) => {
+    console.log(data);
+  };
 
   return (
     <div>
       <section className="p-6 dark:bg-gray-800 dark:text-gray-50">
         <form
           onSubmit={handleSubmit(handleAddBlog)}
-          novalidate=""
           action=""
           className="container flex flex-col mx-auto space-y-12 ng-untouched ng-pristine ng-valid"
         >
@@ -22,7 +23,7 @@ const AddBlog = () => {
             </div>
             <div className="grid grid-cols-6 gap-4 col-span-full lg:col-span-3">
               <div className="col-span-full sm:col-span-3">
-                <label for="authorName" className="text-sm">
+                <label htmlFor="authorName" className="text-sm">
                   Author
                 </label>
                 <input
@@ -30,12 +31,12 @@ const AddBlog = () => {
                   type="text"
                   {...register("authorName")}
                   placeholder="Author name"
-                  className="w-full rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-400 dark:border-gray-700 dark:text-gray-900"
+                  className="w-full rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-400 dark:border-gray-700 dark:text-gray-900 mt-1"
                 />
               </div>
 
               <div className="col-span-full sm:col-span-3">
-                <label for="blogTitle" className="text-sm">
+                <label htmlFor="blogTitle" className="text-sm">
                   Blog Title
                 </label>
                 <input
@@ -43,22 +44,22 @@ const AddBlog = () => {
                   type="text"
                   {...register("blogTitle")}
                   placeholder="Blog title"
-                  className="w-full rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-400 dark:border-gray-700 dark:text-gray-900"
+                  className="w-full rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-400 dark:border-gray-700 dark:text-gray-900 mt-1"
                 />
               </div>
               <div className="col-span-full">
-                <label for="blogDescription" className="text-sm">
+                <label htmlFor="blogDescription" className="text-sm">
                   Blog Description
                 </label>
                 <textarea
                   id="blogDescription"
                   placeholder=""
                   {...register("blogDescription")}
-                  className="w-full rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-400 dark:border-gray-700 dark:text-gray-900"
+                  className="w-full rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-400 dark:border-gray-700 dark:text-gray-900 mt-1"
                 ></textarea>
               </div>
               <div className="col-span-full">
-                <label for="blogDescription" className="text-sm">
+                <label htmlFor="blogDescription" className="text-sm">
                   Photo
                 </label>
                 <div className="flex items-center space-x-2">
@@ -67,12 +68,18 @@ const AddBlog = () => {
                     alt=""
                     className="w-10 h-10 rounded-full dark:bg-gray-500 dark:bg-gray-700"
                   />
-                  <button
+
+                  <input
+                    type="submit"
+                    className="px-4 py-2 border rounded-md dark:border-gray-100"
+                    value="Submit"
+                  />
+                  {/* <button
                     type="button"
                     className="px-4 py-2 border rounded-md dark:border-gray-100"
                   >
                     Change
-                  </button>
+                  </button> */}
                 </div>
               </div>
             </div>
