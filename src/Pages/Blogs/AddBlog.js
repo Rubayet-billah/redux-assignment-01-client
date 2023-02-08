@@ -1,10 +1,16 @@
 import React from "react";
+import { useForm } from "react-hook-form";
 
 const AddBlog = () => {
+  const { register, handleSubmit } = useForm();
+
+  const handleAddBlog = (data) => {};
+
   return (
     <div>
       <section className="p-6 dark:bg-gray-800 dark:text-gray-50">
         <form
+          onSubmit={handleSubmit(handleAddBlog)}
           novalidate=""
           action=""
           className="container flex flex-col mx-auto space-y-12 ng-untouched ng-pristine ng-valid"
@@ -16,40 +22,43 @@ const AddBlog = () => {
             </div>
             <div className="grid grid-cols-6 gap-4 col-span-full lg:col-span-3">
               <div className="col-span-full sm:col-span-3">
-                <label for="username" className="text-sm">
+                <label for="authorName" className="text-sm">
                   Author
                 </label>
                 <input
-                  id="username"
+                  id="authorName"
                   type="text"
-                  placeholder="Username"
+                  {...register("authorName")}
+                  placeholder="Author name"
                   className="w-full rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-400 dark:border-gray-700 dark:text-gray-900"
                 />
               </div>
 
               <div className="col-span-full sm:col-span-3">
-                <label for="firstname" className="text-sm">
+                <label for="blogTitle" className="text-sm">
                   Blog Title
                 </label>
                 <input
-                  id="firstname"
+                  id="blogTitle"
                   type="text"
-                  placeholder="First name"
+                  {...register("blogTitle")}
+                  placeholder="Blog title"
                   className="w-full rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-400 dark:border-gray-700 dark:text-gray-900"
                 />
               </div>
               <div className="col-span-full">
-                <label for="bio" className="text-sm">
-                  Bio
+                <label for="blogDescription" className="text-sm">
+                  Blog Description
                 </label>
                 <textarea
-                  id="bio"
+                  id="blogDescription"
                   placeholder=""
+                  {...register("blogDescription")}
                   className="w-full rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-400 dark:border-gray-700 dark:text-gray-900"
                 ></textarea>
               </div>
               <div className="col-span-full">
-                <label for="bio" className="text-sm">
+                <label for="blogDescription" className="text-sm">
                   Photo
                 </label>
                 <div className="flex items-center space-x-2">
