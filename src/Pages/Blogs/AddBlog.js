@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
 import postBlogToDb from "../../redux/thunk/blog/postBlog";
 
-// { author, body, category, _id, publish_date, title },
+// { author, body, category, _id, publish_date, title,reaction,comments },
 
 const AddBlog = () => {
   const { register, handleSubmit } = useForm();
