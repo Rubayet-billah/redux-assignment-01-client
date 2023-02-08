@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -23,22 +24,20 @@ const Header = () => {
           </a>
           <ul className="items-stretch hidden space-x-3 md:flex">
             <li className="flex">
-              <a
-                rel="noopener noreferrer"
-                href="/"
+              <Link
+                to="/"
                 className="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent"
               >
-                Link
-              </a>
+                Home
+              </Link>
             </li>
             <li className="flex">
-              <a
-                rel="noopener noreferrer"
-                href="/"
+              <Link
+                to="/addblog"
                 className="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent"
               >
-                Link
-              </a>
+                Add Blog
+              </Link>
             </li>
             <li className="flex">
               <a
