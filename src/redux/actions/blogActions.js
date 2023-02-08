@@ -6,3 +6,10 @@ export const loadBlog = (blog) => {
     payload: blog,
   };
 };
+
+export const postBlog = (blog) => {
+  return {
+    type: LOAD_BLOG,
+    payload: blog,
+  };
+};

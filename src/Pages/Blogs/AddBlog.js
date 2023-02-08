@@ -1,15 +1,18 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+import { useDispatch } from "react-redux";
+import postBlogToDb from "../../redux/thunk/blog/postBlog";
 
 const AddBlog = () => {
   const { register, handleSubmit } = useForm();
-
+  const dispatch = useDispatch();
   const handleAddBlog = (data) => {
     const blogObject = {
       ...data,
       date: new Date(),
     };
-    console.log(blogObject);
+
+    dispatch(postBlogToDb(blogObject));
   };
 
   return (

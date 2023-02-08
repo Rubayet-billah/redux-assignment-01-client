@@ -1,4 +1,4 @@
-import { LOAD_BLOG } from "../actions/actionTypes/actionTypes";
+import { LOAD_BLOG, POST_BLOG } from "../actions/actionTypes/actionTypes";
 
 const initialState = {
   blogs: [],
@@ -10,6 +10,11 @@ const blogReducer = (state = initialState, action) => {
       return {
         ...state,
         blogs: action.payload,
+      };
+    case POST_BLOG:
+      return {
+        ...state,
+        blogs: [...state.blogs, action.payload],
       };
     default:
       return state;
