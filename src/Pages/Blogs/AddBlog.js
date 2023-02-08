@@ -5,7 +5,11 @@ const AddBlog = () => {
   const { register, handleSubmit } = useForm();
 
   const handleAddBlog = (data) => {
-    console.log(data);
+    const blogObject = {
+      ...data,
+      date: new Date(),
+    };
+    console.log(blogObject);
   };
 
   return (
