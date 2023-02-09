@@ -12,8 +12,11 @@ const Banner = () => {
               50% Off
             </h2>
             <div className="space-x-2 text-center py-2 lg:py-0">
-              <span>Plus free shipping! Use code:</span>
-              <span className="font-bold text-lg">MAMBA</span>
+              <span>
+                We focus on industry leading platforms so that you can be
+                prepared for your next skill. Then we teach all we can about
+                them.
+              </span>
             </div>
             <a
               href="/"
