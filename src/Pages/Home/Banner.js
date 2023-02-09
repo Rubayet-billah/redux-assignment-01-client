@@ -6,17 +6,15 @@ const Banner = () => {
       <div className="p-6 py-12 dark:bg-violet-400 dark:text-gray-900">
         <div className="container mx-auto">
           <div className="flex flex-col lg:flex-row items-center justify-between">
-            <h2 className="text-center text-6xl tracking-tighter font-bold">
-              Up to
-              <br className="sm:hidden" />
-              50% Off
-            </h2>
-            <div className="space-x-2 text-center py-2 lg:py-0">
-              <span>
+            <div className=" py-2 lg:py-0">
+              <h2 className="text-6xl tracking-tighter font-bold">
+                Read Latest Blogs
+              </h2>
+              <p className="text-2xl max-w-3xl mt-10">
                 We focus on industry leading platforms so that you can be
                 prepared for your next skill. Then we teach all we can about
                 them.
-              </span>
+              </p>
             </div>
             <a
               href="/"
