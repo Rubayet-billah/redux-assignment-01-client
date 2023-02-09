@@ -22,7 +22,11 @@ const BlogCard = ({ blog, location }) => {
 
   return (
     <div>
-      <div className="flex flex-col max-w-lg p-6 space-y-6 overflow-hidden rounded-lg shadow-md dark:bg-gray-900 dark:text-gray-100">
+      <div
+        className={`flex flex-col max-w-lg p-6 space-y-6 overflow-hidden rounded-lg shadow-md dark:bg-gray-900 dark:text-gray-100 ${
+          location?.pathname.includes("dashboard") && "bg-green-100"
+        }`}
+      >
         <section className="flex justify-between items-center">
           <div className="flex space-x-4">
             <img

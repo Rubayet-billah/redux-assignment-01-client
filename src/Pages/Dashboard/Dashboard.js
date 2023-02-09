@@ -14,7 +14,7 @@ const Dashboard = () => {
   }, [dispatch]);
   return (
     <div>
-      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14 mt-10">
         {blogs?.map((blog) => (
           <BlogCard key={blog._id} blog={blog} location={location} />
         ))}
