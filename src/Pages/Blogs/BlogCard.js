@@ -1,7 +1,10 @@
 import React from "react";
 import { AiFillDelete, AiFillEdit } from "react-icons/ai";
+import { useDispatch } from "react-redux";
+import deleteBlogFromDb from "../../redux/thunk/blog/deleteBlog";
 
 const BlogCard = ({ blog, location }) => {
+  const dispatch = useDispatch();
   const {
     author,
     body,
@@ -12,6 +15,10 @@ const BlogCard = ({ blog, location }) => {
     reaction,
     comments,
   } = blog;
+
+  const handleDelete = (id) => {
+    dispatch(deleteBlogFromDb(id));
+  };
 
   return (
     <div>
@@ -44,6 +51,7 @@ const BlogCard = ({ blog, location }) => {
               </button>
               <button
                 title="Delete"
+                onClick={() => handleDelete(_id)}
                 className="px-4 py-3 font-semibold rounded dark:bg-gray-100 dark:text-gray-800"
               >
                 <AiFillDelete />

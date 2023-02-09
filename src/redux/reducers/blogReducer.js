@@ -1,4 +1,8 @@
-import { LOAD_BLOG, POST_BLOG } from "../actions/actionTypes/actionTypes";
+import {
+  DELETE_BLOG,
+  LOAD_BLOG,
+  POST_BLOG,
+} from "../actions/actionTypes/actionTypes";
 
 const initialState = {
   blogs: [],
@@ -15,6 +19,11 @@ const blogReducer = (state = initialState, action) => {
       return {
         ...state,
         blogs: [...state.blogs, action.payload],
+      };
+    case DELETE_BLOG:
+      return {
+        ...state,
+        blogs: state.blogs.filter((blog) => blog._id !== action.payload),
       };
     default:
       return state;
