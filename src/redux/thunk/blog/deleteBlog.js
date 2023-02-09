@@ -2,9 +2,12 @@ import { deleteBlog } from "../../actions/blogActions";
 
 const deleteBlogFromDb = (id) => {
   return async (dispatch, getState) => {
-    const res = await fetch(`http://localhost:5000/blogs/${id}`, {
-      method: "DELETE",
-    });
+    const res = await fetch(
+      `https://redux-assignment-01-server.vercel.app/blogs/${id}`,
+      {
+        method: "DELETE",
+      }
+    );
     const data = await res.json();
 
     if (data.deletedCount) {
