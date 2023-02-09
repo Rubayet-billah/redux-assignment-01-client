@@ -1,7 +1,7 @@
 import React from "react";
 import { AiFillDelete, AiFillEdit } from "react-icons/ai";
 
-const BlogCard = ({ blog }) => {
+const BlogCard = ({ blog, location }) => {
   const {
     author,
     body,
@@ -34,20 +34,22 @@ const BlogCard = ({ blog }) => {
               <span className="text-xs dark:text-gray-400">4 hours ago</span>
             </div>
           </div>
-          <div>
-            <button
-              title="Edit"
-              className="px-4 py-3 font-semibold rounded dark:bg-gray-100 dark:text-gray-800"
-            >
-              <AiFillEdit />
-            </button>
-            <button
-              title="Delete"
-              className="px-4 py-3 font-semibold rounded dark:bg-gray-100 dark:text-gray-800"
-            >
-              <AiFillDelete />
-            </button>
-          </div>
+          {location?.pathname.includes("dashboard") && (
+            <div>
+              <button
+                title="Edit"
+                className="px-4 py-3 font-semibold rounded dark:bg-gray-100 dark:text-gray-800"
+              >
+                <AiFillEdit />
+              </button>
+              <button
+                title="Delete"
+                className="px-4 py-3 font-semibold rounded dark:bg-gray-100 dark:text-gray-800"
+              >
+                <AiFillDelete />
+              </button>
+            </div>
+          )}
         </section>
         <div>
           <img
