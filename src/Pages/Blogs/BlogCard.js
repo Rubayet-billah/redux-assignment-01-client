@@ -60,11 +60,11 @@ const BlogCard = ({ blog, location }) => {
           )}
         </section>
         <div>
-          <img
+          {/* <img
             src="https://source.unsplash.com/random/100x100/?5"
             alt=""
             className="object-cover w-full mb-4 h-60 sm:h-96 dark:bg-gray-500"
-          />
+          /> */}
           <h2 className="mb-1 text-xl font-semibold">{title}</h2>
           <p className="text-sm dark:text-gray-400">
             {body.length > 150 ? `${body.slice(0, 150)}...` : body}
