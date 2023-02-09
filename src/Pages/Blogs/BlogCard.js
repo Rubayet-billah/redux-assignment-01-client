@@ -1,4 +1,5 @@
 import React from "react";
+import { AiFillDelete, AiFillEdit } from "react-icons/ai";
 
 const BlogCard = ({ blog }) => {
   const {
@@ -34,8 +35,18 @@ const BlogCard = ({ blog }) => {
             </div>
           </div>
           <div>
-            <button>Edit</button>
-            <button>Delete</button>
+            <button
+              title="Edit"
+              className="px-4 py-3 font-semibold rounded dark:bg-gray-100 dark:text-gray-800"
+            >
+              <AiFillEdit />
+            </button>
+            <button
+              title="Delete"
+              className="px-4 py-3 font-semibold rounded dark:bg-gray-100 dark:text-gray-800"
+            >
+              <AiFillDelete />
+            </button>
           </div>
         </section>
         <div>
