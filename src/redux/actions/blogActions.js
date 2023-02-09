@@ -1,22 +1,22 @@
-import { DELETE_BLOG, LOAD_BLOG } from "./actionTypes/actionTypes";
+import { DELETE_CONTENT, GET_CONTENT } from "./actionTypes/actionTypes";
 
 export const loadBlog = (blog) => {
   return {
-    type: LOAD_BLOG,
+    type: GET_CONTENT,
     payload: blog,
   };
 };
 
 export const postBlog = (blog) => {
   return {
-    type: LOAD_BLOG,
+    type: GET_CONTENT,
     payload: blog,
   };
 };
 
 export const deleteBlog = (id) => {
   return {
-    type: DELETE_BLOG,
+    type: DELETE_CONTENT,
     payload: id,
   };
 };

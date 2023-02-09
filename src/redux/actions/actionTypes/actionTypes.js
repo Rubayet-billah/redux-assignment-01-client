@@ -1,3 +1,3 @@
-export const LOAD_BLOG = "LOAD_BLOG";
-export const POST_BLOG = "POST_BLOG";
-export const DELETE_BLOG = "DELETE_BLOG";
+export const GET_CONTENT = "GET_CONTENT";
+export const ADD_CONTENT = "ADD_CONTENT";
+export const DELETE_CONTENT = "DELETE_CONTENT";
